@@ -32,7 +32,8 @@ class DetailController extends Controller
         {
             foreach ($keywords as $value)
             {
-                $content = preg_replace("/([\x{4e00}-\x{9fa5}]+)[ ]?({$value['word']})[ ]?([\x{4e00}-\x{9fa5}]+)/u", "$1 <a href='{$value['url']}'>$2</a> $3", $content, 1);
+                $url = $value['url'] ? $value['url'] : env('APP_URL')."/a/{$aid}.html";
+                $content = preg_replace("/([\x{4e00}-\x{9fa5}]+)[ ]?({$value['word']})[ ]?([\x{4e00}-\x{9fa5}]+)/u", "$1 <a href='{$url}'>$2</a> $3", $content, 1);
             }
         }
         $data['articleDetailInfo'] = $content;
