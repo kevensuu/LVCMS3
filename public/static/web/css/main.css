@@ -1,0 +1,33 @@
+body{font: 14px/1.5 tahoma,arial,"Microsoft YaHei";background: #fff;color: #222;}
+blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0;outline:0}
+ul,li{list-style: none;}
+em{font-style: normal;}
+a{cursor: pointer;color: #222;}
+a:hover{color:#379be9;text-decoration:underline}
+.color-red{color:red;}
+.f_left{float: left}
+.f_right{float: right}
+.margin-bottom-8{margin-bottom: 8px;}
+.navbar{margin-bottom: 0px;color: #222;}
+.logo{height: 70px;margin-top:10px;}
+.menu ul{overflow:hidden;height:45px;}
+/*.menu .main-menu ul{background: #379be9;}*/
+/*.menu .sub-menu ul{background: #f8f8f8;}*/
+.menu li{height:45px;width: 8%;line-height: 45px;float: left;text-align: center;}
+/*.menu .main-menu li{background: #379be9;}*/
+/*.menu .sub-menu li{background: #f8f8f8;}*/
+.menu .main-menu li a{color: #fff;font-size:16px;}
+.main{margin-top: 15px;}
+.main .top-list{margin-bottom: 50px;}
+.main .top-list li{height: 25px;overflow: hidden;}
+.main .article-list .list-title{font-size: 18px;font-weight: 700;margin-bottom: 10px;}
+.main .article-list .list-desc{margin-bottom: 10px;color: #999;height: 45px;line-height: 1.8em;overflow: hidden;}
+.main .article-list .list-other{color: #999;}
+.main .article-list .list-other a{color: #999;}
+.main .col-right li{overflow: hidden;height: 24px;line-height: 24px;margin-bottom: 10px;}
+.main .col-right li em{margin-right:10px;font-weight: 700;font-size: 16px;font-style: italic;color: #999;}
+.main .col-right .imglist img{width:100%;}
+.main .col-right li a{height: 26px;line-height: 26px;}
+.footer{line-height: 40px;text-align: center;background: #f1f1f1;}
+.footer .text{padding:15px 0;}
+.clear{clear: both;}
