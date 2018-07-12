@@ -36,6 +36,7 @@ class DetailController extends Controller
         }
         $data['articleDetailInfo'] = $content;
         $data['articleStaticInfo'] = ArticleStatistics::one($aid);
+        $data['catNewest'] = ArticleBase::catNewest($data['articleBaseInfo']['s_cid'], 1, 10, ['id', 'title'], $aid);
 
         return view('web/detail', $data);
     }

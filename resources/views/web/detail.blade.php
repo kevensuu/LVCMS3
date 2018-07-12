@@ -8,6 +8,8 @@
     .article-content .detail{padding: 20px 0 0;line-height: 1.6;text-align: left;font-size: 16px;}
     .article-content .detail p{line-height: 30px;margin-bottom: 16px;}
     .article-content .detail a{color: #379be9}
+    .article-content .rel-article li{width:47%;float:left;margin-right:15px;overflow:hidden;}
+    .article-content hr{margin:0;padding:0;margin:5px auto;}
 </style>
 <div class="col-md-8 col-left article-content">
     <div class="sherry_title">
@@ -19,6 +21,13 @@
             @if($articleStaticInfo)浏览数:<span>{{ $articleStaticInfo['pv'] }}</span>@endif
         </div>
     </div>
-    <div class="detail">{!! $articleDetailInfo !!}</div><div class="clear"></div>
+    <div class="detail">{!! $articleDetailInfo !!}
+        <p></p><strong>猜你喜欢:</strong><hr/>
+        <ul class="rel-article">
+            @if($catNewest)
+                @foreach($catNewest as $value)<li><a href="{{ articleUrlInfo($value->id) }}">{{ $value->title }}</a></li>@endforeach
+            @endif
+        </ul>
+    </div><div class="clear" style="height: 20px;"></div>
 </div>
 @endsection
