@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class ArticleStatistics extends Model
 {
@@ -39,5 +40,10 @@ class ArticleStatistics extends Model
             ->select(['pv'])
             ->where('aid', '=', $aid)
             ->first();
+    }
+
+    public static function upPv($aid)
+    {
+        return DB::insert("insert into lv_article_statistics set aid={$aid},pv=1 on duplicate key update pv=pv+1");
     }
 }

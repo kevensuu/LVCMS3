@@ -18,6 +18,7 @@ class DetailController extends Controller
         if($cpage < 1) $cpage=1;
 
         $data = [];
+        $data['pageType'] = 'detail';
 
         $data['articleBaseInfo'] = ArticleBase::one($aid);
         if(!$data['articleBaseInfo']) abort(404);
@@ -39,5 +40,17 @@ class DetailController extends Controller
         $data['catNewest'] = ArticleBase::catNewest($data['articleBaseInfo']['s_cid'], 1, 10, ['id', 'title'], $aid);
 
         return view('web/detail', $data);
+    }
+
+    public function upPv(Request $request)
+    {
+        $aid = (int)$request->input('aid');
+        if(!$aid) return;
+
+        ArticleStatistics::upPv($aid);
+
+        return response()
+            ->json(['ret'=>1])
+            ->withCallback($request->input('callback'));
     }
 }

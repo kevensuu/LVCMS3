@@ -30,4 +30,5 @@
         </ul>
     </div><div class="clear" style="height: 20px;"></div>
 </div>
+<script>var aid = {{ $articleBaseInfo->id }}</script>
 @endsection

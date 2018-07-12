@@ -22,3 +22,5 @@ Route::get('/c/{cid}_{cpage}.html', 'Web\CategoryController@cnewest')->where(['c
 
 Route::get('/a/{aid}.html', 'Web\DetailController@show')->where('aid', '[0-9]+');
 Route::get('/a/{aid}_{cpage}.html', 'Web\DetailController@show')->where(['aid'=>'[0-9]+', 'cpage'=>'[0-9]+']);
+
+Route::get('/upArticlePv', 'Web\DetailController@upPv');
